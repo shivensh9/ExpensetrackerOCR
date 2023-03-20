@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+  My Home Page
+{% endblock %}
+{% block content %}
+<form action = "" method = "POST" enctype="multipart/form-data">
+    <h1>Expense Form</h1>
+    {% csrf_token %}
+    {{form.as_ul}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
